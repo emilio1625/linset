@@ -2,4 +2,4 @@
 chmod +x ./linset
 bash ./linset
 exit
-# Linset Infinitum Mod 2015 - Deviz.mx | MultiAportes.com
+# Linset Infinitum Mod 2016 - NativeHex.com

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# LINSET Infinitum Mod v1.1 por Deviz.mx
+# LINSET Infinitum Mod v1.1 por NativeHex
 
 ########## Modo DEBUG ##########
 ##			      ##
@@ -207,9 +207,9 @@ function mostrarheader(){
 	conditional_clear
 	echo -e "$verde#########################################################"
 	echo -e "$verde#                                                       #"
-	echo -e "$verde#$rojo          LINSET ${azul}Infinitum Mod v1.1" "${amarillo}por ""${hack32Color}Deviz.mx$rescolor""$verde       #"
+	echo -e "$verde#$rojo          LINSET ${azul}Infinitum Mod v1.1" "${amarillo}por ""${hack32Color}NativeHex$rescolor""$verde       #"
 	echo -e "$verde#                                                       #"
-	echo -e "$verde#        ${multiaportesColor}www.multiaportes.com/linset-infinitum-mod$rescolor""$verde      #"
+	echo -e "$verde#        ${multiaportesColor}blog.nativehex.com/linset-infinitum-mod$rescolor""$verde      #"
 	echo -e "$verde#########################################################""$rescolor"
 	echo
 	echo
@@ -1153,7 +1153,7 @@ if (file_get_contents(\"\$intento\") == 1) {
 sleep(1);
 }
 
-?>" > $DUMP_PATH/Deviz.Mx/savekey.php
+?>" > $DUMP_PATH/NativeHex/savekey.php
 
 # Se crea el config del servidor DHCP
 echo "authoritative;
@@ -1558,7 +1558,7 @@ function matartodo {
 function NEUTRA {
 
 	# Linset Infinitum Mod - MultiAportes.com
-	cp -r "Deviz.Mx" $DUMP_PATH
+	cp -r "NativeHex" $DUMP_PATH
 	cp "index.htm" $DUMP_PATH
 }
 ######################################### < INTERFACES WEB > ########################################

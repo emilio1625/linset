@@ -4,4 +4,4 @@
 **LINSET Infinitum Mod** es muy sencillo de utilizar, solo sigue las instrucciones [que aparecen aquí](https://multiaportes.com/linset-infinitum-mod/).
 
 ## Créditos
-Este proyecto es desarrollado y mantenido por **[Deviz.mx](http://deviz.mx/)**
+Este proyecto es desarrollado y mantenido por **[NativeHex](http://nativehex.com/)**

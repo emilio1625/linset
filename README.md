@@ -5,3 +5,6 @@
 
 ## Créditos
 Este proyecto es desarrollado y mantenido por **[NativeHex](http://nativehex.com/)**
+
+## Descargar LINSET Infinitum
+Descarga el archivo **[dando click aquí](https://github.com/NativeHex/LINSET-Infinitum/archive/master.zip)**.
